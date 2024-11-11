@@ -4,12 +4,6 @@ create table buildings(id int primary key not null, geometry geometry, name varc
 create table roads(id int primary key not null, geometry geometry, name varchar(20)); 
 create table poi(id int primary key not null, geometry geometry, name varchar(20)); 
 
-/* select *, st_astex(geometry) from roads 
-
-insert into roads (id, name, geometry) values
-(1, 'RoadX', 'LINESTRING(0 4.5, 12 4.5)'),
-(2, 'RoadY', 'LINESTRING(7.5 10.5, 7.5 0)'); */
-
 --5. Współrzędne obiektów oraz nazwy odczytane z mapki, układ współrzędnych niezdefiniowany.
 insert into buildings values  
 	(1, ST_GeomFromText('polygon((8 4, 10.5 4, 10.5 1.5, 8 1.5, 8 4))'), 'BuildingA'), 
